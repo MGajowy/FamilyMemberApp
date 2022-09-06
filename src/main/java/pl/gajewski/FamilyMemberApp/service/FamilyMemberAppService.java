@@ -21,13 +21,13 @@ public class FamilyMemberAppService {
     private final RestTemplate restTemplate;
 
     @Autowired
-    public FamilyMemberAppService(RestTemplate restTemplate) throws URISyntaxException {
+    public FamilyMemberAppService(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
 
     public Boolean createFamilyMember(FamilyMember familyMember) {
         try {
-            FamilyMember result = restTemplate.postForObject(uriCreateMemberFamily, familyMember, FamilyMember.class);
+            restTemplate.postForObject(uriCreateMemberFamily, familyMember, FamilyMember.class);
             log.info("Odpytanie serwisu: " + uriCreateMemberFamily);
             return true;
         } catch (Exception e) {
