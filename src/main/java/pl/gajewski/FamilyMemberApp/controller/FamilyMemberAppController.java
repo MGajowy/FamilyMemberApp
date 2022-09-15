@@ -19,7 +19,7 @@ public class FamilyMemberAppController {
     @PostMapping(FamilyMemberAppConstant.CREATE_FAMILY_MEMBER)
     public ResponseEntity<HttpStatus> createFamilyMember(@RequestBody FamilyMember familyMember) {
         Boolean result = familyMemberAppService.createFamilyMember(familyMember);
-        return Boolean.TRUE.equals(result) ? new ResponseEntity<>(HttpStatus.OK): new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        return Boolean.TRUE.equals(result) ? new ResponseEntity<>(HttpStatus.CREATED): new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
 
     @GetMapping(FamilyMemberAppConstant.SEARCH_FAMILY_MEMBER + "/{id}")
