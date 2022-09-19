@@ -10,8 +10,8 @@ import pl.gajewski.FamilyMemberApp.dto.FamilyMember;
 @Service
 @Log4j2
 public class FamilyMemberAppService {
-    private static final String URI_CREATE_MEMBER_FAMILY = "http://familyapp-family-database-1:8022/db/createMemberFamily";
-    private static final String URI_SEARCH_MEMBER_FAMILY = "http://familyapp-family-database-1:8022/db/searchMemberFamily/";
+    private static final String URI_CREATE_MEMBER_FAMILY = "http://family-database-app:8022/db/createMemberFamily";
+    private static final String URI_SEARCH_MEMBER_FAMILY = "http://family-database-app:8022/db/searchMemberFamily/";
 
     private final RestTemplate restTemplate;
 
